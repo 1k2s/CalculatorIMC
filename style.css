@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body, input, button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+body {
+    background: #040924;
+    /* border: 5px solid white; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    /* border: 5px solid white; */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 42.8rem;
+    max-height: 44rem;
+    padding: 4.8rem 5.4rem;
+    border-radius: 10px;
+    background: white;
+    /* border: 5px solid rgb(255, 3, 3); */
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    color: #0C3440;
+    font-size: clamp(1rem, 2vw + 1.8rem, 3.2rem);
+    font-weight: 700;
+    line-height: 4.0rem;
+    margin-bottom: 3.2rem;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper input {
+    padding: 1.6rem;
+    width: 100%;
+    max-height: 5.2rem;
+    /* width: 100%; */
+    border-radius: 5px;
+    border: none;
+
+    background: #DCE2E9;
+    
+}
+
+.input-wrapper:nth-child(2) {
+    margin-bottom: 1.6rem;
+}
+
+.input-wrapper input::-webkit-inner-spin-button {
+    appearance: none;                                    /* Retirando setas do input number*/
+}
+
+.input-wrapper label {
+    color:#00453A;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8rem;
+    margin-bottom: 8px;
+}
+
+button {
+    display: flex;
+    background-color:#02799D;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    width: 100%;
+    max-height: 5.2rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 3.2rem;
+
+    color: #FFF;
+    text-align: center;
+    font-size: clamp(1rem, 2vw + .9rem, 1.8rem);
+    font-weight: 700;
+    line-height: 2rem;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#005670;
+    transform: scale(1.01);
+}
+
