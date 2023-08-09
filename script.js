@@ -63,6 +63,9 @@ function modalIN () {
 function modalOut () {
     main.classList.remove('blur')
     modal.classList.add('hidden')
+
+    inputHeight.value = ''
+    inputWeight.value = ''
 }
 
 
