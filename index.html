@@ -16,6 +16,10 @@
 
         <div class="container">
 
+           <header>
+                <p>Digite somente números ou preencha todos os campos</p>
+           </header>
+
             <main>
 
                 <form>
@@ -25,21 +29,33 @@
                         
                         <div class="input-wrapper">
                             <label for="weight">Peso (kg)</label>
-                            <input type="number" name="Peso" id="weight" placeholder="ex: 85" >
+                            <input class="inputWeight" type="number" name="Peso" id="weight" placeholder="ex: 85" >
                         </div>
         
                         <div class="input-wrapper">
                             <label for="height">Altura (cm)</label>
-                            <input type="number" name="height" id="height" placeholder="ex: 185">
+                            <input class="inputHeight" type="number" name="height" id="height" placeholder="ex: 185">
                         </div>
         
-                        <button type="submit">Calcular IMC <img src="./img/arrow-up-right.svg"></button>
-        
                     </fieldset>
+
+                    <button type="submit">Calcular IMC <img src="./img/arrow-up-right.svg"></button>
                 
                 </form>
 
             </main>
+
+            <div class="screenModal hidden">
+
+                <img src="./img/close.svg" alt="">
+
+                <h1>Seu IMC é de #</h1>
+
+                <div class="text">
+                    <span>Classificação:</span><p>Magreza</p>
+                </div>
+
+            </div>
 
         </div>
 
