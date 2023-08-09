@@ -48,7 +48,7 @@ form.onsubmit = (event) => {
 
 /*Transições de telas */ 
 function modalIN () {
-    if(inputHeight.value == '' || inputWeight.value == '') {
+    if(isNaN(inputHeight.value) || isNaN(inputWeight.value)) {
         header.classList.add('openError')
     } else {
         header.classList.remove('openError')
@@ -83,15 +83,10 @@ function block (event) {
 
 
 
-
-
-
-
-
-
 /*Events */
 btnCalcIMC.addEventListener('click', modalIN)
 imgClose.addEventListener('click', modalOut)
 inputWeight.addEventListener('keypress', block)
 inputHeight.addEventListener('keypress', block)
+
 
