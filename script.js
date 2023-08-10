@@ -14,7 +14,7 @@ let result;
 /*Função de Cálculo IMC */ 
 function calcIMC (weight, height) {
     return (weight / ((height/ 100) ** 2)).toFixed(2)
-}
+};
 
 /*Função das classificações */ 
 function classIMC () {
@@ -27,7 +27,7 @@ function classIMC () {
     } else if (result > 29.9) {
         pModal.innerText = 'Obesidade'
     }
-}
+};
 
 /*calculando IMC após dar submit/ retirando atualização da página(prevent default) */ 
 form.onsubmit = (event) => {
@@ -45,32 +45,18 @@ form.onsubmit = (event) => {
 
 };
 
-
-/*Transições de telas */ 
-function modalIN () {
-    if(isNaN(inputHeight.value) || isNaN(inputWeight.value)) {
+/*Função de validação isNaN/Empty */
+function validError () {
+    if(inputHeight.value == '' || inputWeight.value == '' || isNaN(inputHeight.value) || isNaN(inputWeight.value)) {
         header.classList.add('openError')
     } else {
         header.classList.remove('openError')
         main.classList.add('blur')
         modal.classList.remove('hidden')
     }
-}
-        
+};
 
-        
-
-function modalOut () {
-    main.classList.remove('blur')
-    modal.classList.add('hidden')
-
-    inputHeight.value = ''
-    inputWeight.value = ''
-}
-
-
-
-/*Funcão de bloqueio . , */
+/*Funcão de validação . , */
 function block (event) {
     console.log(event)
     if(event.key == '.' || event.key == ',' || event.key == '-') {
@@ -79,7 +65,28 @@ function block (event) {
     } else {
         header.classList.remove('openError')
     }
-}
+};
+
+
+
+
+
+
+
+/*Transições de telas */ 
+function modalIN () {
+    validError()
+};
+        
+function modalOut () {
+    main.classList.remove('blur')
+    modal.classList.add('hidden')
+
+    inputHeight.value = ''
+    inputWeight.value = ''
+};
+
+
 
 
 
